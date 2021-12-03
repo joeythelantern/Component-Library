@@ -5,7 +5,7 @@
         "url": "https://github.com/joeythelantern/Component-Library.git"
     },
     "version": "0.0.1",
-    "description": "",
+    "description": "A component library for getting people started with easy to re-use components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "files": [
