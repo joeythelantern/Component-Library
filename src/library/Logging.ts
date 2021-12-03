@@ -1,33 +1,23 @@
-class Logging {
+const DEBUG = 'DEBUG';
+const INFO = 'INFO';
+const WARN = 'WARN';
+const ERROR = 'ERROR';
+
+export class Logging {
     private namespace = 'Default';
 
     constructor(namespace?: string) {
         if (namespace) this.namespace = namespace;
     }
 
-    public info = (message: any) => {
-        if (typeof message === 'string') {
-            console.log(`[${this.getDate()}] [${this.namespace}] [INFO] ${message}`);
-        } else {
-            console.log(`[${this.getDate()}] [${this.namespace}] [INFO]`, message);
-        }
+    public log = (key: string, obj: any, ...objs: any[]) => {
+        console.info(`[${this.getDate()}] [${this.namespace}] [${key}] %c${obj}`, ...objs);
     };
 
-    public warn = (message: any) => {
-        if (typeof message === 'string') {
-            console.log(`[${this.getDate()}] [${this.namespace}] [WARN] ${message}`);
-        } else {
-            console.log(`[${this.getDate()}] [${this.namespace}] [WARN]`, message);
-        }
-    };
-
-    public error = (message: any) => {
-        if (typeof message === 'string') {
-            console.log(`[${this.getDate()}] [${this.namespace}] [ERROR] ${message}`);
-        } else {
-            console.log(`[${this.getDate()}] [${this.namespace}] [ERROR]`, message);
-        }
-    };
+    public debug = (obj: any, ...objs: any[]) => this.log(DEBUG, obj, objs);
+    public info = (obj: any, ...objs: any[]) => this.log(INFO, obj, objs);
+    public warn = (obj: any, ...objs: any[]) => this.log(WARN, obj, objs);
+    public error = (obj: any, ...objs: any[]) => this.log(ERROR, obj, objs);
 
     public getDate = () => {
         return new Date().toISOString();
