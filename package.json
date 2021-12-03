@@ -1,5 +1,5 @@
 {
-    "name": "@nc/component-library",
+    "name": "@nerdy-canuck/component-library",
     "repository": {
         "type": "git",
         "url": "https://github.com/joeythelantern/Component-Library.git"
@@ -12,7 +12,7 @@
         "dist"
     ],
     "scripts": {
-        "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
+        "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
         "build:esm": "tsc",
         "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
     },
