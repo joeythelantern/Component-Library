@@ -3,7 +3,7 @@ import Logging, { ILoggingOptions } from '../library/Logging';
 
 /**
  * A hook for a simple logging library.
- * @param namespace  string that will be displayed after the timestamp and before the log level as [namespace].
+ * @param options  Options to pass our logger.
  * @returns object of type Logging
  */
 export const useLogging = (options?: ILoggingOptions): [Logging] => {
