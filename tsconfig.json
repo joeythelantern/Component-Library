@@ -13,7 +13,7 @@
         "outDir": "dist/esm",
         "sourceMap": true,
         "strict": true,
-        "target": "es5"
+        "target": "es6"
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
