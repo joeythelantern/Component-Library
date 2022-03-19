@@ -1,10 +1,10 @@
 {
-    "name": "@nerdy-canuck/component-library",
+    "name": "n-c-component-library",
     "repository": {
         "type": "git",
         "url": "https://github.com/joeythelantern/Component-Library.git"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A component library for getting people started with easy to re-use components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -19,7 +19,7 @@
     "author": "The Nerdy Canuck",
     "license": "MIT",
     "devDependencies": {
-        "@types/node": "^17.0.1",
+        "@types/node": "^17.0.21",
         "@types/react": "^17.0.37",
         "@types/react-dom": "^17.0.11",
         "react": "^17.0.2",
